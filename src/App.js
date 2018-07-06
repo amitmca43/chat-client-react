@@ -4,10 +4,6 @@ import './App.css';
 
 import { connect } from 'react-redux';
 import { defaultFunction } from './actions';
-
-import ChatUsers from './components/chat-users';
-import ChatGroups from './components/chat-groups';
-import chatMessages from './components/chat-messages';
 import Chat from './components/chat';
 
 class App extends Component {
@@ -19,10 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <ChatUsers />
-        <ChatGroups />
-        <ChatMessages />
+      <div className="root">
         <Chat />
       </div>
     );

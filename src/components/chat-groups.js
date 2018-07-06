@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 class ChatGroups extends Component {
-    render() {
+    render () {       
         return (
-            <div>Chat Groups</div>
-        );
+            <div className="rooms-list">
+                <div>Groups</div>  
+            </div>
+        )
     }
 }
 
