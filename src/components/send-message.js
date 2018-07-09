@@ -18,10 +18,12 @@ class SendMessage extends Component {
     
     handleSubmit(e) {
         e.preventDefault()
-        this.props.sendMessage(this.state.message)
-        this.setState({
-            message: ''
-        })
+        if(this.state.message) {
+            this.props.sendMessage(this.state.message);
+            this.setState({
+                message: ''
+            });
+        } 
     }
     
     render() {
@@ -33,7 +35,7 @@ class SendMessage extends Component {
                     onChange={this.handleChange}
                     value={this.state.message}
                     placeholder="Type your message and hit ENTER"
-                    type="text" />
+                    type="text" />               
             </form>
         )
     }
